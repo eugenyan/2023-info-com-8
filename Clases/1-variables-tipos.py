@@ -1,7 +1,7 @@
 print ("hola mundo")
 
 # Variables y tipos datos simples
-enteros = # int -> integer -> entero/// = es operador de asignacion
+enteros = 11 # int -> integer -> entero/// = es operador de asignacion
 reales = 11.22 # float -> reales (?)
     # tipos string, cadenas de caracteres
 strings = 'hola'
@@ -13,7 +13,7 @@ bool_verdadero = True
 bool_falso = False
 
 # Tipos de datos complejos
-listas = [1, 3, 4, 5] #
+listas = [1, 3, 4, 5] # con corchetes
 listas[0] # devuelve 1
 listas[1] # devuelve 3
 listas[2] # devuelve 4
@@ -35,7 +35,7 @@ listas.remove(13) # saca por valor
 
 # son estructuras de datos complejas estaticas
 tuplas = (1, 3, 32, 13, 15)
-print('elemento 32 de la tupla:', tuplas[2])
+print('elemento de la posicion 2:', tuplas[2])
 # tuplas[2]=23 # no se puede cambiar los valores de las tuplas
 # print(tuplas[2])
 
