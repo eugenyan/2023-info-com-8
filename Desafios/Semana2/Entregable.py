@@ -61,4 +61,3 @@ opciones = {True: "existe", False: "no existe"}
 existe_python = "python" in txt
 
 print("La palabra python", opciones[existe_python])
-
