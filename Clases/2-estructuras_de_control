@@ -2,6 +2,9 @@
 # manejar el flujo de actividades tareas que voy a realizar con mi algoritmo
 
 # ... codigo, condicional simple
+a = 5
+b = 10
+
 if(a==b): # si pasa esto, hace lo que esta debajo
     print("b y a son iguales")
 
