@@ -8,46 +8,28 @@ nombre = input("Ingrese su nombre: ")
 print("｡.:* Bienvenidx,", nombre, "! *.:｡\nVoy a elegir un numero del 1 al 100, \ny tenés 8 intentos para adivinar cuál es...")
 
 # Generar aleatoriamente un número entero entre 1 y 100.
-random_num = randint(1, 100)
+random_num = randint(1, 10)
 intentos = 0
 
 while True:
-    numero = int(input("☘ Probá tu suerte: "))
-    intentos =+ 1
-    if (numero > random_num):
-        print("Te pasaste! Intena con un numero menor ;)")
-        print(f"Intenta nuevamuente. Te quedan {8 - intentos} intentos")
-    elif (numero < random_num):
-        print("Estas lejos! Intenta con un numero mayor ;)")
-        print(f"Intenta nuevamente. Te quedan {8 - intentos} intentos")
+    numero = (input("☘ Probá tu suerte: ")) # Solicitarle que ingrese un número.
+    es_int = numero.isdigit()
+    intentos += 1
+    if es_int == False:
+        intentos -= 1 # Si el usuario no ingresa un número entero no debes descontarle un intento
+        print("⊰(Ŏ ⋓ Ŏ)⊱ Ups! Ese no era un numero entero...") # avisarle que no es un número entero el que ingresó.
     elif (intentos == 8):
-        print("(ಥ︹ಥ) MALA SUERTE! Tuviste muchos intentos.")
-        print("El numero era:", random_num)
+        print("(ಥ︹ಥ) MALA SUERTE! Tuviste muchos intentos.") # debes informarle que se agotaron los intentos 
+        print("El numero era:", random_num) # cuál era el número que tenía que adivinar.
         break
+    elif es_int < random_num and es_int == True:
+        print("Estas lejos! Intenta con un numero mayor ;)") # informarle que el número a adivinar es mayor.
+        print(f"Intenta nuevamente. Te quedan {8 - intentos} intentos") # Informarle al usuario cuántos intentos le quedan y solicitarle que ingrese un número.
+    elif es_int > random_num and es_int == True:
+        print("Te pasaste! Intena con un numero menor ;)") # informarle que el número a adivinar es menor.
+        print(f"Intenta nuevamuente. Te quedan {8 - intentos} intentos") # Informarle al usuario cuántos intentos le quedan y solicitarle que ingrese un número.
     else:
-        print("٩〔^ᴗ^〕۶ ACERTASTE!")
-        print("Te tomó", intentos, "intentos.")
+        es_int == random_num
+        print("٩〔^ᴗ^〕۶ ACERTASTE!") # informarle que ha ganado 
+        print("Te tomó", intentos, "intentos.") # decirle en cuál intento lo adivinó.
         break
-
-
-# (es_int == False):
-#         print("⊰(Ŏ ⋓ Ŏ)⊱ Ups! Ese no era un numero entero...")
-
-# while cont_intentos < 8:
-#      print("Todavia intentos", 8 - (cont_intentos + 1))
-#      cont_intentos += 1
-
-
-# El "número" ingresado por el usuario puede:
-#  No ser un número entero, en éste caso avisarle que no es un número entero el que ingresó.
-# tip 2: con el método isdigit() puedes saber si es posible convertir a entero
-#  Ser menor al que tiene que adivinar, en éste caso informarle que el número a adivinar es mayor.
-#  Ser mayor al que tiene que adivinar, en éste caso informarle que el número a adivinar es menor.
-#  Igual al que tiene que adivinar, en éste caso informarle que ha ganado y decirle en cuál intento
-# lo adivinó.
-#  Si el usuario no ingresa un número entero no debes descontarle un intento, en los demás casos si
-# debes descontarle un intento.
-#  En cada intento debes informarle al usuario los intentos que le quedan disponibles y solicitarle que
-# ingrese otro número.
-#  Si el usuario no acierta en los 8 intentos, debes informarle que se agotaron los intentos y cuál era el
-# número que tenía que adivinar.
