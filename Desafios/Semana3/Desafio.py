@@ -34,4 +34,4 @@ while intentos < 8:
 else:
     (intentos == 8)
     print("\n(ಥ︹ಥ) MALA SUERTE! Tuviste muchos intentos.") # # # # debes informarle que se agotaron los intentos
-    print("El numero era:", random_num,) # # # # cuál era el número que tenía que adivinar.
+    print("El numero era:", random_num) # # # # cuál era el número que tenía que adivinar.
